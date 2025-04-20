@@ -1,0 +1,17 @@
+# code block for calculating error rate of 1st assignment
+def calculate_error_percentage(observed, actual):
+    """
+    Calculate the error rate in percentage between observed and actual values.
+    
+    Parameters:
+    observed (float): The value measured by the device.
+    actual (float): The actual (true) value.
+
+    Returns:
+    float: Error rate in percentage.
+    """
+    if actual == 0:
+        raise ValueError("Actual value cannot be zero.")
+    
+    error_percentage = abs((observed/1000000) - actual) / abs(actual) * 100
+    return error_percentage
